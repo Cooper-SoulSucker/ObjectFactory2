@@ -11,13 +11,29 @@ public class Donuts {
     public int numberOfDonuts;
 
 
+
+
+
+
     //Constructor
     //Constructor is a method - special
     //No void needed
     //Has to follow the name of the class exactly
-    public Donuts() {
+    public Donuts(int pNumberOfDonuts) {
         frostingType = "boston cream";
+        numberOfDonuts = pNumberOfDonuts;
         hasFilling = true;
-        numberOfDonuts = 3;
     }
+
+
+    //todo: make a method called printInfo
+
+    public void printInfo () {
+        //todo: use souts to print the instance variables
+
+        System.out.println( "the type of cream is"+ frostingType);
+        System.out.println("hasFilliong: " + hasFilling);
+        System.out.println(numberOfDonuts +  "donuts");
+    }
+
 }

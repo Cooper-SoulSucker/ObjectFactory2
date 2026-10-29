@@ -11,6 +11,10 @@ public class Factory {
     //class = blueprints
     //object = is the house
 
+    public int randomNumber;
+    public int randomNumber2;
+
+
     public static void main(String[] args) {
 
         Factory a = new Factory();
@@ -25,7 +29,9 @@ public class Factory {
         System.out.println(yearFounded);
         System.out.println("it is" + isOpen + "that the factory is open");
 
-        donutOrder1 = new Donuts();
+        randomNumber = (int)(Math.random() * 100) + 1; //1-100 donuts
+
+        donutOrder1 = new Donuts(randomNumber);
         System.out.println(donutOrder1.numberOfDonuts);
          //todo: print all of the instance varible of donuts
         //extra challange : have words print what the variables are
@@ -35,22 +41,25 @@ public class Factory {
         donutOrder1.numberOfDonuts = donutOrder1.numberOfDonuts + 1;
         System.out.println(donutOrder1.numberOfDonuts +"order 1 #donuts");
 
-
-
-        donutOrder2 = new Donuts();
+        randomNumber2 = (int)(Math.random() * 45) + 1;
+        //todo: make the 2nd order have a range of 1-45
+        donutOrder2 = new Donuts(randomNumber2);
         //todo: sout the donutsOrder2 instance vars
 
         System.out.println(donutOrder2.numberOfDonuts);
         System.out.println(donutOrder2.numberOfDonuts+"donuts please");
         System.out.println("all"+donutOrder2.frostingType);
         System.out.println("it is"+donutOrder2.hasFilling+ "that I want filling");
-        donutOrder2.numberOfDonuts = donutOrder1.numberOfDonuts * 2;
+        donutOrder2.numberOfDonuts = donutOrder1.numberOfDonuts;
         System.out.println(donutOrder2.numberOfDonuts);
 
         System.out.println("welcome to cooper's factory 2");
         System.out.println( "the factory was founded in");
         System.out.println(yearFounded);
         System.out.println("it is" + isOpen + "that the factory is open");
+
+
+        donutOrder2.printInfo();
 
 
     }
